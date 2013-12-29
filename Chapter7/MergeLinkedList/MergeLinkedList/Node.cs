@@ -12,7 +12,7 @@ namespace MergeLinkedList
 		{
 		}
 
-		public static Node<T> Merge(Node<T> first, Node<T> second, IComparer<T> comparer)
+		public static Node<T> MergeSortedLinkedLists(Node<T> first, Node<T> second, IComparer<T> comparer)
 		{
 			Node<T> head = null;
 			Node<T> tail = null;

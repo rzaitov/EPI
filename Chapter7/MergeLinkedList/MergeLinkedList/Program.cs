@@ -10,7 +10,7 @@ namespace MergeLinkedList
 			Node<int> first = FetchFirst();
 			Node<int> second = FetchSecond();
 
-			Node<int> union = Node<int>.Merge(first, second, Comparer<int>.Default);
+			Node<int> union = Node<int>.MergeSortedLinkedLists(first, second, Comparer<int>.Default);
 			do
 			{
 				Console.Write(string.Format("{0} ", union.Data));
