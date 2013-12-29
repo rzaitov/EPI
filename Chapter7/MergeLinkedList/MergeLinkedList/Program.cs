@@ -30,7 +30,7 @@ namespace MergeLinkedList
 		private static Node<int> FetchSecond()
 		{
 			Node<int> head = new Node<int> { Data = 3 };
-			head.AppendNew(11).AppendNew(20);
+			head.AppendNew(11).AppendNew(20).AppendNew(30).AppendNew(40);
 
 			return head;
 		}

@@ -14,44 +14,41 @@ namespace MergeLinkedList
 
 		public static Node<T> Merge(Node<T> first, Node<T> second, IComparer<T> comparer)
 		{
-			Node<T> head = Min(first, second, comparer);
-			Node<T> curr = head;
+			Node<T> head = null;
+			Node<T> tail = null;
 
-			while(first != null || second != null)
+			while(first != null && second != null)
 			{
-				first = curr == first ? first.Next : first;
-				second = curr == second ? second.Next : second;
-
-				curr.Next = Min(first, second, comparer);
-				curr = curr.Next;
+				bool isFirstBigger = comparer.Compare(first.Data, second.Data) == 1;
+				if(isFirstBigger)
+					AppendAndAdvance(ref second, ref head, ref tail);
+				else
+					AppendAndAdvance(ref first, ref head, ref tail);
 			}
+
+			if(first == null)
+				AppendNode(second, ref head, ref tail);
+
+			if(second == null)
+				AppendNode(first, ref head, ref tail);
 
 			return head;
 		}
 
-		protected static Node<T> Min(Node<T> x, Node<T> y, IComparer<T> comparer)
+		private static void AppendNode(Node<T> nodeToAppend, ref Node<T> head, ref Node<T> tail)
 		{
-			if(x == null)
-				return y;
+			if(head != null) // after first call tail != null
+				tail.Next = nodeToAppend;
+			else             // first method call
+				head = nodeToAppend;
 
-			if(y == null)
-				return x;
+			tail = nodeToAppend;
+		}
 
-			int comparision = comparer.Compare(x.Data, y.Data);
-
-			switch(comparision)
-			{
-				case 1:
-					return y;
-
-				case 0:
-				case -1:
-					return x;
-
-				default:
-					throw new InvalidOperationException();
-			}
-
+		private static void AppendAndAdvance(ref Node<T> nodeToAppend, ref Node<T> head, ref Node<T> tail)
+		{
+			AppendNode(nodeToAppend, ref head, ref tail);
+			nodeToAppend = nodeToAppend.Next;
 		}
 	}
 }
