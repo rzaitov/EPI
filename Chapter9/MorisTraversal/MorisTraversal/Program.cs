@@ -7,18 +7,13 @@ namespace MorisTraversal
 	{
 		public static void Main(string[] args)
 		{
-			StrBn c = new StrBn { Data = "C" };
-			StrBn e = new StrBn { Data = "E" };
-			StrBn d = new StrBn { Data = "D", Left = c, Right = e };
+			StrBn d = new StrBn("D").Left("C").Right("E");
+			StrBn b = new StrBn("B").Left("A").Right(d);
 
-			StrBn a = new StrBn { Data = "A" };
-			StrBn b = new StrBn { Data = "B", Left = a, Right = d };
+			StrBn i = new StrBn("I").Left("H");
+			StrBn g = new StrBn("G").Right(i);
 
-			StrBn h = new StrBn { Data = "H" };
-			StrBn i = new StrBn { Data = "I", Left = h };
-
-			StrBn g = new StrBn { Data = "G", Right = i };
-			StrBn f = new StrBn { Data = "F", Left = b, Right = g };
+			StrBn f = new StrBn("F").Left(b).Right(g);
 
 			MorisIterator<string> iterator = new MorisIterator<string>(f);
 			while(iterator.MoveNext())

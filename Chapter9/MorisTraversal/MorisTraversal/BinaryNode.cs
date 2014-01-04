@@ -9,8 +9,15 @@ namespace MorisTraversal
 		public BinaryNode<T> Right { get; set; }
 
 		public BinaryNode()
+			: this(default(T))
 		{
 		}
+
+		public BinaryNode(T data)
+		{
+			Data = data;
+		}
+
 	}
 }
 
