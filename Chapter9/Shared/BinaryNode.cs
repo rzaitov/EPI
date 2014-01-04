@@ -1,6 +1,6 @@
 using System;
 
-namespace MorisTraversal
+namespace BinaryTree
 {
 	public class BinaryNode<T>
 	{

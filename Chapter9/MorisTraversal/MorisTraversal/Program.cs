@@ -1,5 +1,7 @@
 using System;
-using StrBn = MorisTraversal.BinaryNode<string>;
+
+using BinaryTree;
+using StrBn = BinaryTree.BinaryNode<string>;
 
 namespace MorisTraversal
 {

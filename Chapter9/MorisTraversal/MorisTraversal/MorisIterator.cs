@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
+using BinaryTree;
+
 namespace MorisTraversal
 {
 	public class MorisIterator<T> : IEnumerator<BinaryNode<T>>
