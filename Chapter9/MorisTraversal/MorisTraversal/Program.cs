@@ -20,7 +20,11 @@ namespace MorisTraversal
 			StrBn g = new StrBn { Data = "G", Right = i };
 			StrBn f = new StrBn { Data = "F", Left = b, Right = g };
 
-			StrBn.MorisInorderTraversal(f, n => Console.Write(string.Format("{0} ", n.Data)));
+			MorisIterator<string> iterator = new MorisIterator<string>(f);
+			while(iterator.MoveNext())
+			{
+				Console.Write(string.Format("{0} ", ((StrBn)iterator.Current).Data));
+			}
 		}
 	}
 }
