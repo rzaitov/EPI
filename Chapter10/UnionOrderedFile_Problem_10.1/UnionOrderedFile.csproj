@@ -36,13 +36,13 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="..\..\Shared\BinaryHeap.cs">
+    <Compile Include="..\Shared\BinaryHeap.cs">
       <Link>BinaryHeap.cs</Link>
     </Compile>
-    <Compile Include="..\..\Shared\BinaryMaxHeap.cs">
+    <Compile Include="..\Shared\BinaryMaxHeap.cs">
       <Link>BinaryMaxHeap.cs</Link>
     </Compile>
-    <Compile Include="..\..\Shared\BinaryMinHeap.cs">
+    <Compile Include="..\Shared\BinaryMinHeap.cs">
       <Link>BinaryMinHeap.cs</Link>
     </Compile>
   </ItemGroup>

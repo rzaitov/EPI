@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnionOrderedFile", "UnionOrderedFile\UnionOrderedFile.csproj", "{DEB2BB12-28A3-4182-A40A-412F804C08C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnionOrderedFile", "UnionOrderedFile.csproj", "{DEB2BB12-28A3-4182-A40A-412F804C08C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +15,6 @@ Global
 		{DEB2BB12-28A3-4182-A40A-412F804C08C8}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = UnionOrderedFile\UnionOrderedFile.csproj
+		StartupItem = UnionOrderedFile.csproj
 	EndGlobalSection
 EndGlobal
