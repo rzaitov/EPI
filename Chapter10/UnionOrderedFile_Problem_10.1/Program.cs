@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 
 using Heap;
@@ -43,6 +44,9 @@ namespace UnionOrderedFile
 				PrintHeap(minHeap);
 				Console.WriteLine();
 			}
+
+			StreamReader sr = new StreamReader();
+			sr.BaseStream.p
 		}
 
 		private static void PrintHeap<T>(BinaryHeap<T> heap)

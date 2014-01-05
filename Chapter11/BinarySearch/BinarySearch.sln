@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearch", "BinarySearch.csproj", "{6A11074B-388B-4BF3-AD16-0541138B26FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{9C40FC10-DADE-40F9-B29F-AE63893BB4CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A11074B-388B-4BF3-AD16-0541138B26FD}.Debug|x86.ActiveCfg = Debug|x86
+		{6A11074B-388B-4BF3-AD16-0541138B26FD}.Debug|x86.Build.0 = Debug|x86
+		{6A11074B-388B-4BF3-AD16-0541138B26FD}.Release|x86.ActiveCfg = Release|x86
+		{6A11074B-388B-4BF3-AD16-0541138B26FD}.Release|x86.Build.0 = Release|x86
+		{9C40FC10-DADE-40F9-B29F-AE63893BB4CC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9C40FC10-DADE-40F9-B29F-AE63893BB4CC}.Debug|x86.Build.0 = Debug|Any CPU
+		{9C40FC10-DADE-40F9-B29F-AE63893BB4CC}.Release|x86.ActiveCfg = Release|Any CPU
+		{9C40FC10-DADE-40F9-B29F-AE63893BB4CC}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = BinarySearch.csproj
+	EndGlobalSection
+EndGlobal
