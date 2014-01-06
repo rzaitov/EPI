@@ -4,18 +4,15 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using NUnit.Framework.SyntaxHelpers;
 
-using SortedCollectionIntersection;
-
 namespace UnitTest
 {
-	[TestFixture]
-	public class UnsortedTestCase
+	public abstract class TestCaseBase
 	{
-		private int[] _first;
-		private int[] _second;
-		private int[] _third;
+		protected int[] _first;
+		protected int[] _second;
+		protected int[] _third;
 
-		private Comparer<int> _comparer;
+		protected Comparer<int> _comparer;
 
 		[SetUp]
 		public void Setup()
@@ -50,12 +47,14 @@ namespace UnitTest
 		{
 			List<int> intersection;
 
-			intersection = first.IntersectOrdered1(second, _comparer);
+			intersection = DoIntersect(first, second);// first.IntersectOrdered1(second, _comparer);
 			Assert.That(intersection, Is.EqualTo(expected));
 
-			intersection = second.IntersectOrdered1(first, _comparer);
+			intersection = DoIntersect(second, first); // second.IntersectOrdered1(first, _comparer);
 			Assert.That(intersection, Is.EqualTo(expected));
 		}
+
+		protected abstract List<int> DoIntersect(IList<int> first, IList<int> second);
 	}
 }
 

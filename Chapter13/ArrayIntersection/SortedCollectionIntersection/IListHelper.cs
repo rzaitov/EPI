@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 
+using BinarySearch;
+
 namespace SortedCollectionIntersection
 {
 	public static class IListHelper
@@ -25,6 +27,32 @@ namespace SortedCollectionIntersection
 						break;
 					}
 				}
+			}
+
+			return common;
+		}
+
+		/// <summary>
+		/// Intersect ordered collections. Best for n << m. Result array will be wihout duplicates. Time: O(n*log(m))
+		/// </summary>
+		public static List<T> IntersectOrdered2<T>(this IList<T> first, IList<T> second, Comparer<T> comparer)
+		{
+			bool firstIsBigger = first.Count > second.Count;
+
+			IList<T> small = firstIsBigger ? second : first;
+			IList<T> huge = firstIsBigger ? first : second;
+
+			List<T> common = new List<T>();
+
+			int index;
+			for(int i = 0; i < small.Count; i++)
+			{
+				if(i != 0 && comparer.Compare(small[i], small[i - 1]) == 0)
+					continue;
+
+				index = huge.DoBinarySearch(small[i], comparer);
+				if(index >= 0)
+					common.Add(small[i]);
 			}
 
 			return common;
