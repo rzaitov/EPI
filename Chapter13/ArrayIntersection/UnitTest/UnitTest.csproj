@@ -39,6 +39,7 @@
     <Compile Include="NaiveImplTestCase.cs" />
     <Compile Include="SmallHugeTestCase.cs" />
     <Compile Include="TestCaseBase.cs" />
+    <Compile Include="SameLengthTestCase.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

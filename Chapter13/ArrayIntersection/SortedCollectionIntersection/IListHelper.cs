@@ -57,6 +57,37 @@ namespace SortedCollectionIntersection
 
 			return common;
 		}
+
+		/// <summary>
+		/// Intersect ordered collections. Best for n = m. Result array will be wihout duplicates. Time: O(n + m)
+		/// </summary>
+		public static List<T> IntersectOrdered3<T>(this IList<T> first, IList<T> second, Comparer<T> comparer)
+		{
+			List<T> common = new List<T>();
+			int i = 0, j = 0;
+
+			while(i < first.Count && j < second.Count)
+			{
+				int comparision = comparer.Compare(first[i], second[j]);
+
+				if((i == 0 || comparer.Compare(first[i], first[i - 1]) != 0) && comparision == 0)
+				{
+					common.Add(first[i]);
+					i++;
+					j++;
+				}
+				else if(comparision == 1)
+				{
+					j++;
+				}
+				else
+				{
+					i++;
+				}
+			}
+
+			return common;
+		}
 	}
 }
 
