@@ -33,6 +33,8 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="IListHelper.cs" />
+    <Compile Include="..\..\Shared\BinarySearch\IListHelper.cs">
+      <Link>IListHelper.cs</Link>
+    </Compile>
   </ItemGroup>
 </Project>
