@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace BinarySearch
 {
-	public static class ArrayHelper
+	public static class IListHelper
 	{
 		/// <summary>
 		/// Return index of first occurence
 		/// </summary>
-		public static int DoBinarySearch<T>(this T[] array, T element, Comparer<T> comparer)
+		public static int DoBinarySearch<T>(this IList<T> array, T element, Comparer<T> comparer)
 		{
-			int middle, left = 0, right = array.Length - 1;
+			int middle, left = 0, right = array.Count - 1;
 			int result = -1;
 
 			while(left <= right)
@@ -38,9 +38,9 @@ namespace BinarySearch
 			return result;
 		}
 
-		public static int FirstGreaterThan<T>(this T[] array, T element, Comparer<T> comparer)
+		public static int FirstGreaterThan<T>(this IList<T> array, T element, Comparer<T> comparer)
 		{
-			int middle, left = 0, right = array.Length - 1;
+			int middle, left = 0, right = array.Count - 1;
 			int result = -1;
 
 			while(left <= right)

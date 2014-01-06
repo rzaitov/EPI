@@ -32,7 +32,7 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Compile Include="ArrayHelper.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="IListHelper.cs" />
   </ItemGroup>
 </Project>
