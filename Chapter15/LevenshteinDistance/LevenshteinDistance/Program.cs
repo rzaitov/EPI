@@ -1,28 +1,24 @@
 using System;
 using Wfa = LevenshteinDistance.WagnerFischerAlgorithm;
+using WfaSimple = LevenshteinDistance.WagnerFischerAlgorithmSimple;
 namespace LevenshteinDistance
 {
 	class MainClass
 	{
 		public static void Main(string[] args)
 		{
-			Wfa alg1 = new Wfa("kitten", "sitting");
-			PrintResult(alg1);
-		
-			Wfa alg2 = new Wfa("sunday", "saturday");
-			PrintResult(alg2);
-
-			Wfa alg3 = new Wfa("CONNECT", "CONEHEAD");
-			PrintResult(alg3);
-
-			Wfa alg4 = new Wfa("Orchestra", "Carthorse");
-			PrintResult(alg4);
+			CalcAndPrintLevenshteinDistance("kitten", "sitting");
+			CalcAndPrintLevenshteinDistance("sunday", "saturday");
+			CalcAndPrintLevenshteinDistance("CONNECT", "CONEHEAD");
+			CalcAndPrintLevenshteinDistance("Orchestra", "Carthorse");
 		}
 
-		private static void PrintResult(Wfa alg)
+		private static void CalcAndPrintLevenshteinDistance(string first, string second)
 		{
+			Wfa alg = new WfaSimple(first, second);
 			int dist = alg.CalcLevenshteinDistance();
-			Console.WriteLine(string.Format("{0} -> {1}\t\tdistance: {2}", alg.First, alg.Second, dist));
+
+			Console.WriteLine(string.Format("{0} -> {1}\t\t distance: {2}", first, second, dist));
 		}
 	}
 }
