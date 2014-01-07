@@ -4,13 +4,13 @@ namespace LevenshteinDistance
 {
 	public abstract class WagnerFischerAlgorithm 
 	{
-		protected string First { get; private set; }
-		protected string Second { get; private set; }
+		protected string _first;
+		protected string _second;
 
 		public WagnerFischerAlgorithm(string first, string second)
 		{
-			First = first;
-			Second = second;
+			_first = first;
+			_second = second;
 		}
 
 		public abstract int CalcLevenshteinDistance();
