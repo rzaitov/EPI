@@ -37,10 +37,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MorisIterator.cs" />
-    <Compile Include="..\..\Shared\BinaryNode.cs">
+    <Compile Include="..\..\..\Shared\BinaryTree\BinaryNode.cs">
       <Link>BinaryNode.cs</Link>
     </Compile>
-    <Compile Include="..\..\Shared\BinaryNodeHelper.cs">
+    <Compile Include="..\..\..\Shared\BinaryTree\BinaryNodeHelper.cs">
       <Link>BinaryNodeHelper.cs</Link>
     </Compile>
   </ItemGroup>

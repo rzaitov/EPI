@@ -27,7 +27,6 @@ namespace BinaryTree
 			parent.Right = rChild;
 			return parent;
 		}
-
 	}
 }
 
