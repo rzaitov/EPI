@@ -61,6 +61,39 @@ namespace MaxSubarray
 
 			optimum = subSums[array.Length - 1];
 		}
+
+		public void Divide2(int[] array, out int l, out int r, out int optimum)
+		{
+			if(array.Length == 0)
+			{
+				l = r = optimum = -1;
+				return;
+			}
+			l = r = optimum = 0;
+
+			int minSum = 0;
+			int sum = 0;
+			int j = -1;
+
+			for(int i = 0; i < array.Length; i++)
+			{
+				sum += array[i];
+				int sum_j_i = sum - minSum;
+
+				if(i > 0 && sum_j_i > optimum)
+				{
+					l = j != -1 ? j + 1 : 0;
+					r = i;
+					optimum = sum_j_i;
+				}
+
+				if(sum < minSum)
+				{
+					minSum = sum;
+					j = i;
+				}
+			}
+		}
 	}
 }
 
